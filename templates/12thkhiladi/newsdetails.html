@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+ 
+        <!-- content body -->
+        <section class="contant-body">
+            <div class="wrap-container">
+                <div class="row">
+                    <div class="col-lg-9 col-md-9 col-12">
+                        <div class="detail-vedio">
+                            <h1>{{blogdetails.post_title}}</h1>
+                            <div class="user-post">
+                                <div>
+                                    <img src="{% static 'images/profile-user.png' %}" alt="user" width="40" height="40"></div>
+                                <div>
+                                    
+                                    <p>By sk yadav{{blogdetails.username}}</p>
+                                    <div class="date-time">
+                                        <span>Created :<i class="fas fa-calendar-alt"></i> {{blogdetails.post_date|date}}</span> <span> <i class="fas fa-clock"></i> {{ blogdetails.post_date|time }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                          <img src="../upload/{{blogdetails.post_image}}" alt="header-banner-news">
+                  <p class="py-2">{{blogdetails.post_des|safe}}</p>
+                        </div>    
+                              
+                        </div>
+                        {% include "rightcol.html" %}
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row height d-flex justify-content-center align-items-center">
+                            <div class="col-md-12">
+                                <div class="search-bar">
+                                    <div class="search">
+                                        <i class="fa fa-search"></i>
+                                        <input type="text" class="form-control" placeholder="Search for player,Series,Team,News or video." />
+                                        <button class="btn">Search</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <h2 class="fs-14 pb-2">News</h2>
+                            <div class="col-lg-3 col-md-3 col-6 mb-4">
+                                <div class="search-list">
+                                    <a href="#">
+                                        <img src="{% static 'images/newss.png' %}" alt="img" />
+                                        <h2>Bazball: The Bold Reinvention of Test Cricket</h2>
+                                        <p><i class="fas fa-calendar-alt"></i> Jun 20, 2023 11:12 AM</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-6 mb-4">
+                                <div class="search-list">
+                                    <a href="#">
+                                        <img src="{% static 'images/newss.png' %}" alt="img" />
+                                        <h2>Bazball: The Bold Reinvention of Test Cricket</h2>
+                                        <p><i class="fas fa-calendar-alt"></i> Jun 20, 2023 11:12 AM</p>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-6 mb-4">
+                                <div class="search-list">
+                                    <a href="#">
+                                        <img src="{% static 'images/newss.png' %}" alt="img" />
+                                        <h2>Bazball: The Bold Reinvention of Test Cricket</h2>
+                                        <p><i class="fas fa-calendar-alt"></i> Jun 20, 2023 11:12 AM</p>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-6 mb-4">
+                                <div class="search-list">
+                                    <a href="#">
+                                        <img src="{% static 'images/newss.png' %}" alt="img" />
+                                        <h2>Bazball: The Bold Reinvention of Test Cricket</h2>
+                                        <p><i class="fas fa-calendar-alt"></i> Jun 20, 2023 11:12 AM</p>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-6 mb-4">
+                                <div class="search-list">
+                                    <a href="#">
+                                        <img src="{% static 'images/newss.png' %}" alt="img" />
+                                        <h2>Bazball: The Bold Reinvention of Test Cricket</h2>
+                                        <p><i class="fas fa-calendar-alt"></i> Jun 20, 2023 11:12 AM</p>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-6 mb-4">
+                                <div class="search-list">
+                                    <a href="#">
+                                        <img src="{% static 'images/newss.png' %}" alt="img" />
+                                        <h2>Bazball: The Bold Reinvention of Test Cricket</h2>
+                                        <p><i class="fas fa-calendar-alt"></i> Jun 20, 2023 11:12 AM</p>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-6 mb-4">
+                                <div class="search-list">
+                                    <a href="#">
+                                        <img src="{% static 'images/newss.png' %}" alt="img" />
+                                        <h2>Bazball: The Bold Reinvention of Test Cricket</h2>
+                                        <p><i class="fas fa-calendar-alt"></i> Jun 20, 2023 11:12 AM</p>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-6 mb-4">
+                                <div class="search-list">
+                                    <a href="#">
+                                        <img src="{% static 'images/newss.png' %}" alt="img" />
+                                        <h2>Bazball: The Bold Reinvention of Test Cricket</h2>
+                                        <p><i class="fas fa-calendar-alt"></i> Jun 20, 2023 11:12 AM</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal -->
+        
+{% endblock %}  

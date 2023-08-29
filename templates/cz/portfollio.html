@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+<div id="content" class="site-content">
+    <div class="page-header flex-middle">
+        <div class="container">
+            <div class="inner flex-middle">
+                <h1 class="page-title">Portfollio</h1>
+                <ul id="breadcrumbs" class="breadcrumbs none-style">
+                    <li><a href="<?=base_url();?>index">Home</a></li>
+                    <li class="active">Portfollio</li>
+                </ul>    
+            </div>
+        </div>
+    </div>
+    <section class="portfolio-grid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="ot-heading">
+                        <h2 class="main-heading"> Our Projects</h2>
+                        <span class="animate-border"></span>
+                    </div>
+                    <div class="space-5"></div>
+                </div>
+            </div>
+           <div class="row">
+                <div class="col-lg-12">
+                    <div class="project-filter-wrapper">
+                        <!--<ul class="project_filters">-->
+                        <!--    <li><a href="#" data-filter="*" class="selected">All</a></li>-->
+                        <!--    <li><a href="#" data-filter=".design">Design</a></li>                       -->
+                        <!--    <li><a href="#" data-filter=".development">Development</a></li>                     -->
+                        <!--    <li><a href="#" data-filter=".ideas">Ideas</a></li>                     -->
+                        <!--    <li><a href="#" data-filter=".technology">Technology</a></li>                       -->
+                        <!--</ul>-->
+                        <div class="projects-grid projects-style-1 projects-col3">
+
+                            <div class="project-item design ideas">
+                                <div class="projects-box">
+                                    <div class="projects-thumbnail">
+                                        <a href="https://www.levelup11.com/">
+                                            <img src="{% static 'assets/images/projects/levelup11.jpg' %}" alt="levelup11">
+                                        </a>
+                                    </div>
+                                    <div class="portfolio-info ">
+                                        <a class="overlay" href="https://www.levelup11.com/"></a>
+                                        <div class="portfolio-info-inner">
+                                            <h5><a href="https://www.levelup11.com/">Gaming Website</a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-item development">
+                                <div class="projects-box">
+                                    <div class="projects-thumbnail">
+                                        <a href="https://www.12thkhiladi.com/">
+                                            <img src="{% static 'assets/images/projects/12khiladi.jpg' %}" alt="12khiladi">
+                                        </a>
+                                    </div>
+                                    <div class="portfolio-info ">
+                                        <a class="overlay" href="https://www.12thkhiladi.com/"></a>
+                                        <div class="portfolio-info-inner">
+                                             <h5><a href="https://www.12thkhiladi.com/">Fantasy Blog</a></h5>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-item ideas technology">
+                                <div class="projects-box">
+                                    <div class="projects-thumbnail">
+                                        <a href="https://www.myfirstboss.com/">
+                                            <img src="{% static 'assets/images/projects/mfb.jpg' %}" alt="mfb">
+                                        </a>
+                                    </div>
+                                    <div class="portfolio-info ">
+                                        <a class="overlay" href="https://www.myfirstboss.com/"></a>
+                                        <div class="portfolio-info-inner">
+                                            <h5><a href="https://www.myfirstboss.com/">Job Portal Website</a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-item design ideas">
+                                <div class="projects-box">
+                                    <div class="projects-thumbnail">
+                                        <a href="http://powertechinteriorz.com/">
+                                            <img src="{% static 'assets/images/projects/powertrak.jpg' %}" alt="powertrak">
+                                        </a>
+                                    </div>
+                                    <div class="portfolio-info ">
+                                        <a class="overlay" href="http://powertechinteriorz.com/"></a>
+                                        <div class="portfolio-info-inner">
+                                            <h5><a href="http://powertechinteriorz.com/">Interior Design</a></h5>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-item development ideas">
+                                <div class="projects-box">
+                                    <div class="projects-thumbnail">
+                                        <a href="https://www.websky.co.in/">
+                                            <img src="{% static 'assets/images/projects/websky.jpg' %}" alt="websky">
+                                        </a>
+                                    </div>
+                                    <div class="portfolio-info ">
+                                        <a class="overlay" href="https://www.websky.co.in/"></a>
+                                        <div class="portfolio-info-inner">
+                                            <h5><a href="https://www.websky.co.in/">Website Design</a></h5>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-item development">
+                                <div class="projects-box">
+                                    <div class="projects-thumbnail">
+                                        <a href="#">
+                                            <img src="{% static 'assets/images/projects/wirellay.jpg' %}" alt="wirellay"></a>
+                                    </div>
+                                    <div class="portfolio-info ">
+                                        <a class="overlay" href="#"></a>
+                                        <div class="portfolio-info-inner">
+                                            <h5><a href="#">Gaming Website Design</a></h5>
+                                           
+                                       
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                   
+                    </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+{% endblock %}

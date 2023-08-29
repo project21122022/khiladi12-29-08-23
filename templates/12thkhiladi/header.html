@@ -1,0 +1,81 @@
+{% load static %}
+<body>
+    <!-- start darkmode -->
+    <section class="bg-drmmode">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 d-flex justify-content-lg-end justify-content-end align-items-lg-center align-items-center py-1 lg-px-5">
+                    <input type="checkbox" class="checkbox" id="checkbox" />
+                    <label for="checkbox" class="checkbox-label">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                        <span class="ball"></span>
+                    </label>
+                    <button type="button" class="bg-btn border-2 btn"><a class="" href="login.html">Login</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end darkmode -->
+    <div class="support">
+        <!-- Start Nav bar -->
+        <div class="container-fluid">
+            <div class="nav-container">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="/"><img src="{% static 'logo/DarkLogo.svg' %}" alt="logo" /></a>
+                        <a class="navbar-brand-1" href="/"><img src="{% static 'logo/LightLogo.svg' %}" alt="logo" style="display: none;" /></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon">
+                                <i class="fas fa-bars"></i>
+                            </span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarScroll">
+                            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                            {% for link in Blogcat %}
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="/{{link.cat_slug}}">{{link.cat_name}}</a>
+                                </li>
+                               
+                            {% endfor %}
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Video</a>
+                                    <ul class="dropdown-menu animate__animated animate__fadeInLeft" aria-labelledby="navbarScrollingDropdown">
+                                        <li><a class="dropdown-item" href="/video/cricket">Cricket</a></li>
+                                        <li><a class="dropdown-item" href="/video/football">Football</a></li>
+                                        <li><a class="dropdown-item" href="/video/horseracing">Horseracing</a></li>
+                                        <li><a class="dropdown-item" href="/video/esports-video">Esports</a></li>
+                                        <li><a class="dropdown-item" href="/video/pridictions">Pridictions</a></li>
+                                        <li><a class="dropdown-item" href="/video/fantasy">Fantasy</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">More</a>
+                                    {% comment %} <ul class="dropdown-menu animate__animated animate__fadeInLeft" aria-labelledby="navbarScrollingDropdown">
+                                        <li><a class="dropdown-item" href="#">Trending News</a></li>
+                                        <li><a class="dropdown-item" href="#">Latest News</a></li>
+                                    </ul> {% endcomment %}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="search-btn d-flex">
+                        <button class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fas fa-search fa-2x icn-serch"></i></button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+           <!-- End nav bar -->
+           <div class="container-fluid mt-4">
+            <div class="ad-banner">
+           
+                <a href="https://beardo.in/?utm_source=alliance&utm_medium=12thkhiladi">
+                    <img src="{% static '../upload/'%}{{adtop.ad_image}}" alt="banner" />
+                </a>
+                
+              
+            </div>
+            
+        </div>
+    </div>

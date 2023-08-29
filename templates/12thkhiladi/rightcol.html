@@ -1,0 +1,47 @@
+{% load static %}
+<div class="col-lg-3 col-md-3 col-12">
+    <h2 class="h2-title">LATEST NEWS</h2>
+    {% for latnews in latnews %}
+    <div class="box-caontainer">
+        <a class="link-text" href="/{{latnews.post_cat|lower}}/{{latnews.slug}}">
+            <h5 class="h5-title">{{latnews.post_title}}</h5>
+            <span><i class="fas fa-calendar-alt"></i> {{latnews.post_date|date}}</span> <span> <i class="fas fa-clock"></i> {{ latnews.post_date|time }}</span>
+        </a>
+    </div>
+    {% endfor %}
+    <div class="mns-box">
+        <a href="latest-news.html" class="more-news">More News..</a>
+    </div>
+
+    <div class="advertise-box">
+        <a class="" href="{{adright.ad_url}}" target="_blank"><img src="{% static '../upload/'%}{{adright.ad_image}}" alt="vi-john" style="max-width: 100%; width: auto;" /> </a>
+    </div>
+    <div class="feature-vbox py-3">
+        <h2 class="h2-title">FEATURED VIDEOS</h2>
+        <div class="img-video" style="position: relative;">
+            <a class="img-text-link" href="#">
+                <img src="{% static 'images/fv-1.jpg' %}" alt="img1-vedio" />
+                <button class="ply-video"><i class="fp-prev"></i></button>
+                <p>IPL 2023 - Prithvi Shaw's IPL Dilemma: Is It Time to Part Ways with Delhi Capitals?</p>
+                <span>May 31, 2023 12:53 PM</span>
+            </a>
+        </div>
+        <div class="img-video" style="position: relative;">
+            <a class="img-text-link" href="#">
+                <img src="{% static 'images/fv-1.jpg' %}" alt="img1-vedio" />
+                <button class="ply-video"><i class="fp-prev"></i></button>
+                <p>IPL 2023 - Prithvi Shaw's IPL Dilemma: Is It Time to Part Ways with Delhi Capitals?</p>
+                <span>May 31, 2023 12:53 PM</span>
+            </a>
+        </div>
+
+        <div class="img-video" style="position: relative;">
+            <a class="img-text-link" href="#">
+                <img src="{% static 'images/fv-1.jpg' %}" alt="img1-vedio" />
+                <button class="ply-video"><i class="fp-prev"></i></button>
+                <p>IPL 2023 - Prithvi Shaw's IPL Dilemma: Is It Time to Part Ways with Delhi Capitals?</p>
+                <span>May 31, 2023 12:53 PM</span>
+            </a>
+        </div>
+    </div>
+</div>

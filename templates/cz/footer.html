@@ -1,0 +1,116 @@
+{% load static %}
+<footer id="site-footer" class="site-footer footer-v1">
+    <div class="container">
+        <div style="width:90%; margin: 0 auto;">
+        <div class="row">
+              <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                <div class="widget-footer">
+                    <h5 class="text-white">Address</h5>
+                      <span class="border-btm"></span>
+                   <div class="address">
+                       <p class="text-light"><i class="fas fa-map-marker-alt pr-2"></i> 501, 5th Floor, Northex GDITL Tower, A-9, Netaji Subash Place, Pitam Pura, Delhi-110034</p>
+                       <p class="text-light"><i class="fas fa-phone-alt pr-2"></i> <a href="tel:91-9818129128">91-9818129128</a></p>
+                       <p class="text-light"><i class="fas fa-envelope pr-3"></i><a href="mailto:info@cobaltzebra.com">info@cobaltzebra.com</a></p>
+                   </div>
+                    <div class="ft-list-icon">
+                    <a class="facebook" href="https://www.facebook.com/cobaltzebra/"><i class="fab fa-facebook-f"></i></a>
+                    <a class="linkedin" href="https://in.linkedin.com/company/cobalt-zebra-info-technologies"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="instagram" href="https://www.instagram.com/cobalt_zebra/"><i class="fab fa-instagram"></i></a>
+                    <a class="twitter" href="twitter.com"><i class="fab fa-twitter"></i></a>
+                </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12 d-flex justify-content-md-center">
+                <div class="widget-footer">
+                    <h5 class="text-white">Our Services</h5>
+                    <span class="border-btm"></span>
+                    <ul class="list-items">
+                        <li class="list-item"><a href="/web-development">Web Development</a></li>
+                        <li class="list-item"><a href="/mobile-development">Mobile Development</a></li>
+                        <li class="list-item"><a href="/ui-ux-design">UI/UX Designs</a></li>
+                        <li class="list-item"><a href="/digital-marketing">Digital Marketing</a></li>
+                        <li class="list-item"><a href="/ott-campaigns">OTT Campaigns</a></li>
+                         <li><a href="https://myfirstboss.com/" target="_blank">HR Consultancy</a></li>
+                    </ul>
+                </div>
+            </div>
+          
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12 d-flex justify-content-md-center">
+                <div class="widget-footer">
+                    <h5 class="text-white">Quick link</h5>
+                      <span class="border-btm"></span>
+                    <ul class="list-items">
+                        <li class="list-item"><a href="/about-us">About</a></li>
+                        <li class="list-item"><a href="/service">Service</a></li>
+                        <li class="list-item"><a href="/blog">Blog & News</a></li>
+                        <li class="list-item"><a href="/portfollio">Portfollio</a></li>
+                        <li class="list-item"><a href="/sitemap">Sitemap</a></li>
+                        <li class="list-item"><a href="/sitemap.xml">XML</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            
+        </div>
+        <div class="row mt-65">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <div class="foter-logo">
+                <img src="{% static 'assets/images/cz-logo.png' %}" alt="cz-logo">
+            </div>
+            </div>
+            <div class="col-md-6 text-left text-md-right align-self-center">
+                <p class="copyright-text">Copyright © 2023 cobaltzebra. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+
+</footer><!-- #site-footer -->
+
+   <div class="footercol">
+      <a href="{{ BASE_DIR }}https://api.whatsapp.com/send?phone=9891805739&amp;text=Hello Webhopers" target="_blank" class="tel-foo">  
+     <i class="fa fa-whatsapp whts-color icn-bx"></i> Whatsapp</a>
+
+<a class="col-6" href="tel:+919818129128" target="_blank"><i class="fa fa-phone all-icn icn-bx"></i> Call Us</a>
+        </div>
+</div>
+
+
+<a id="back-to-top" href="#" class="show"><i class="flaticon-up-arrow"></i></a>
+<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+<script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'assets/js/jquery.isotope.min.js' %}"></script>
+<script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'assets/js/easypiechart.min.js' %}"></script>
+<script src="{% static 'assets/js/jquery.countdown.min.js' %}"></script>
+<script src="{% static 'assets/js/scripts.js' %}"></script>
+<script src="{% static 'assets/js/header-mobile.js' %}"></script>
+
+<!-- REVOLUTION JS FILES -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script  src="{% static 'assets/plugins/revolution/revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+<script  src="{% static 'assets/plugins/revolution/revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+
+<!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->    
+<script  src="{% static 'assets/plugins/revolution/revolution/js/extensions/revolution-plugin.js' %}"></script>
+
+<!-- REVOLUTION SLIDER SCRIPT FILES -->
+<script  src="{% static 'assets/js/rev-script-3.js' %}"></script>
+<script src="{% static 'assets/js/royal_preloader.min.js' %}"></script>
+<script>
+    window.jQuery = window.$ = jQuery;  
+    (function($) { "use strict";
+        //Preloader
+        Royal_Preloader.config({
+            mode           : 'logo',
+            logo           : '/static/assets/images/cz-logo.png',
+            logo_size      : [160, 75],
+            showProgress   : true,
+            showPercentage : true,
+            text_colour: '#000000',
+            background:  '#ffffff'
+        });
+    })(jQuery);
+</script> 
+</body>
+</html>

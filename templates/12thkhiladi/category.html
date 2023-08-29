@@ -1,0 +1,197 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+        <!-- content body -->
+        <section class="contant-body">
+            <div class="wrap-container">
+                <div class="row">
+                    {% include "leftcol.html" %}  
+
+                    <div class="col-lg-7 col-md-7 col-12">
+                        <div class="carousel-container">
+                            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+
+                                <div class="carousel-indicators">
+                                    {% for slide in Slider %}
+                                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="{{ forloop.counter }}" class="active" aria-current="true" aria-label="Slide {{ forloop.counter }}"></button>
+                                  {% endfor %}
+                                </div>
+                            <div class="carousel-inner">
+                            {% for slide in Slider %}
+                                <div class="carousel-item {% if forloop.first %}active{% endif %}" data-id="{{ forloop.counter }}">
+                                    <img src="../upload/{{slide.post_image}}" class="d-block w-100" alt="12thkhiladi" />
+                                    <div class="carousel-caption d-md-block">
+                                      <h5><a href="/{{slide.slug}}">{{slide.post_title}}</a></h5>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                              </div>
+                        </div>
+                        
+                        
+                        
+                        {% for Blog in BlogData %}
+ 
+                        <div class="blog-list mt-3">
+                            <div class="row">
+                                <a href="{{Blog.post_cat|lower}}/{{Blog.slug}}" class="post-box">
+                                    <div class="col-lg-3 col-md-3 col-6 d-flex justify-content-center align-items-center">
+                                        <div class="blog-img">
+                                            <img src="../upload/{{Blog.post_image}}" alt="" alt="horseracing" width="185" height="130" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-9 col-md-9 col-6">
+                                        <div class="blog-text">
+                                            <h2>{{Blog.post_title}}</h2>
+                                            <p>{{Blog.post_des|slice:":180"|safe}}</p>
+                                            <div class="date-time">
+                                                <span><i class="fas fa-calendar-alt"></i> {{Blog.post_date|date}}</span> <span> <i class="fas fa-clock"></i> {{ Blog.post_date|time }}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        
+                        <div class="pagination-container mt-3">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    {% include "rightcol.html" %}
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row height d-flex justify-content-center align-items-center">
+                            <div class="col-md-12">
+                                <div class="search-bar">
+                                    <div class="search">
+                                        <i class="fa fa-search"></i>
+                                        <input type="text" class="form-control" placeholder="Search for player,Series,Team,News or video." />
+                                        <button class="btn">Search</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <h2 class="fs-14 pb-2">News</h2>
+                            <div class="col-lg-3 col-md-3 col-6 mb-4">
+                                <div class="search-list">
+                                    <a href="#">
+                                        <img src="{% static 'images/newss.png' %}" alt="img" />
+                                        <h2>Bazball: The Bold Reinvention of Test Cricket</h2>
+                                        <p><i class="fas fa-calendar-alt"></i> Jun 20, 2023 11:12 AM</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-6 mb-4">
+                                <div class="search-list">
+                                    <a href="#">
+                                        <img src="{% static 'images/newss.png' %}" alt="img" />
+                                        <h2>Bazball: The Bold Reinvention of Test Cricket</h2>
+                                        <p><i class="fas fa-calendar-alt"></i> Jun 20, 2023 11:12 AM</p>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-6 mb-4">
+                                <div class="search-list">
+                                    <a href="#">
+                                        <img src="{% static 'images/newss.png' %}" alt="img" />
+                                        <h2>Bazball: The Bold Reinvention of Test Cricket</h2>
+                                        <p><i class="fas fa-calendar-alt"></i> Jun 20, 2023 11:12 AM</p>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-6 mb-4">
+                                <div class="search-list">
+                                    <a href="#">
+                                        <img src="{% static 'images/newss.png' %}" alt="img" />
+                                        <h2>Bazball: The Bold Reinvention of Test Cricket</h2>
+                                        <p><i class="fas fa-calendar-alt"></i> Jun 20, 2023 11:12 AM</p>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-6 mb-4">
+                                <div class="search-list">
+                                    <a href="#">
+                                        <img src="{% static 'images/newss.png' %}" alt="img" />
+                                        <h2>Bazball: The Bold Reinvention of Test Cricket</h2>
+                                        <p><i class="fas fa-calendar-alt"></i> Jun 20, 2023 11:12 AM</p>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-6 mb-4">
+                                <div class="search-list">
+                                    <a href="#">
+                                        <img src="{% static 'images/newss.png' %}" alt="img" />
+                                        <h2>Bazball: The Bold Reinvention of Test Cricket</h2>
+                                        <p><i class="fas fa-calendar-alt"></i> Jun 20, 2023 11:12 AM</p>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-6 mb-4">
+                                <div class="search-list">
+                                    <a href="#">
+                                        <img src="{% static 'images/newss.png' %}" alt="img" />
+                                        <h2>Bazball: The Bold Reinvention of Test Cricket</h2>
+                                        <p><i class="fas fa-calendar-alt"></i> Jun 20, 2023 11:12 AM</p>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-6 mb-4">
+                                <div class="search-list">
+                                    <a href="#">
+                                        <img src="{% static 'images/newss.png' %}" alt="img" />
+                                        <h2>Bazball: The Bold Reinvention of Test Cricket</h2>
+                                        <p><i class="fas fa-calendar-alt"></i> Jun 20, 2023 11:12 AM</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal -->
+        
+{% endblock %}  

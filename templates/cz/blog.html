@@ -1,0 +1,164 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'assets/css/style1.css' %}" />
+<div id="content" class="site-content">
+      <div class="page-header flex-middle">
+                <div class="container">
+                    <div class="inner flex-middle">
+                        <h1 class="page-title">Blog</h1>
+                        <ul id="breadcrumbs" class="breadcrumbs none-style">
+                            <li><a href="/">Home</a></li>
+                            <li class="active">Blog</li>
+                        </ul>    
+                    </div>
+                </div>
+            </div>
+</div>
+    <!-- SECTION -->
+    <div class="section">
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <div class="col-md-8">
+                    <!-- post -->
+                    {% for Blog in BlogData %}
+                    <div class="post post-row">
+                        <a class="post-img" href="/{{Blog.slug}}">
+                            <img src="../upload/{{Blog.blog_image}}" alt="">
+                        </a>
+                        <div class="post-body">
+                            <div class="post-category">
+                                <a href="/{{Blog.slug}}">{{Blog.blog_cat}}</a>
+                            </div>
+                            <h3 class="post-title">
+                                <a href="/{{Blog.slug}}">{{Blog.blog_title}}</a>
+                            </h3>
+                            <ul class="post-meta">
+                                <li><a href="/{{Blog.slug}}">{{Blog.blog_date}}</a></li>
+            
+                            </ul>
+                            <p>{{Blog.blog_des|slice:":255"|safe}}</p>
+                        </div>
+                    </div>
+                    <!-- /post -->
+                    {% endfor %}
+                    <div class="margin">
+                        <div class="l-12 site-pagination">
+                           <div class="col text-center">
+                                <div class="block-27">
+                                  <ul>
+                                    <li></li>
+                                    <!---<li><a href="#">&lt;</a></li>
+                                    <li class="active"><span>1</span></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#">&gt;</a></li>---->
+                                  </ul>
+                                </div>
+                              </div>
+                        </div>
+                     </div>
+                     <!--------
+                    <div class="section-row loadmore text-center">
+                        <a href="" class="primary-button">Load More</a>
+                    </div>--------------->
+                </div>
+                    <!-- /post widget -->
+                <div class="col-md-4">
+                    <!-- post widget -->
+                    <div class="aside-widget">
+                        <div class="section-title">
+                            <h2 class="title">Latest Posts</h2>
+                        </div>
+                        {% for Blog in BlogData %}
+                        <!-- post -->
+                        <div class="post post-widget">
+                            <a class="post-img" href="/{{Blog.slug}}">
+                                <img src="../upload/{{Blog.blog_image}}" alt="">
+                            </a>
+                            <div class="post-body">
+                                <div class="post-category">
+                                    <a href="/{{Blog.slug}}">{{Blog.blog_cat}}</a>
+                                </div>
+                                <h3 class="post-title">
+                                    <a href="/{{Blog.slug}}">{{Blog.blog_title}}</a>
+                                </h3>
+                            </div>
+                        </div>
+                        <!-- /post -->
+                 {% endfor %}
+                    </div>
+                    <!-- /post widget -->
+
+                    <!-- Ad widget -->
+                    <div class="aside-widget text-center">
+                        <a href="{% static 'blog-detail/'%}" style="display: inline-block;margin: auto;">
+                            <img class="img-responsive" src="{% static 'assets/img/ad-1.jpg'%} " alt="">
+                        </a>
+                    </div>
+                    <!-- /Ad widget -->
+
+                </div>
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /SECTION -->
+
+    <!-- SECTION -->
+    <div class="section">
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <!-- ad -->
+                <div class="col-md-12 section-row text-center">
+                    <a href="blog-detail/" style="display: inline-block;margin: auto;">
+                        <img class="img-responsive" src="{% static 'assets/img/ad-2.jpg'%}" alt="">
+                    </a>
+                </div>
+                <!-- /ad -->
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /SECTION -->
+
+    <!-- SECTION -->
+    <div class="section">
+        <!-- container -->
+        <div class="container">
+
+            <!-- row -->
+            <div class="row">
+               {% for Blog in BlogData %}
+                <div class="col-md-4" style="height: 127px;">
+                    
+                    <!-- post -->
+                    <div class="post post-widget">
+                        <a class="post-img" href="/{{Blog.slug}}"><img src="../upload/{{Blog.blog_image}}" alt=""></a>
+                        <div class="post-body">
+                            <div class="post-category">
+                                <a href="/{{Blog.slug}}">{{Blog.blog_cat}}</a>
+                            </div>
+                            <h3 class="post-title"><a href="/{{Blog.slug}}">{{Blog.blog_title}}</a></h3>
+                        </div>
+                    </div>
+                    <!-- /post -->
+                </div>
+               {% endfor %}
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+
+
+{% endblock %}

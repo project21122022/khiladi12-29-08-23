@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>12th Khilad</title>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/app.css" />
+        <link rel="stylesheet" type="text/css" href="css/dklght.css" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/ico" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    </head>
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+  <!-- start darkmode -->
+            <section class="bg-drmmode">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 d-flex justify-content-lg-end justify-content-end align-items-lg-center align-items-center py-1 lg-px-5">
+                            <input type="checkbox" class="checkbox" id="checkbox" />
+                            <label for="checkbox" class="checkbox-label">
+                                <i class="fas fa-moon"></i>
+                                <i class="fas fa-sun"></i>
+                                <span class="ball"></span>
+                            </label>
+                            <button type="button" class="bg-btn border-2 btn"><a class="" href="login.html">Login</a></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end darkmode -->
+ <div class="support">
+	 <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="logo-login">
+                    <a class="navbar-brand" href="index.html"><img src="logo/DarkLogo.svg" alt="logo" /></a>
+                            <a class="navbar-brand-1" href="index.html"><img src="logo/LightLogo.svg" alt="logo" style="display: none;" /></a>
+                            <p>The Sports Coverage You Deserv</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+         <div class="card bg-light mt-3">
+<article class="card-body mx-auto" style="max-width: 400px;">
+    <h4 class="card-title mt-3 text-center">Create Account</h4>
+    <p class="text-center">Get started with your free account</p>
+    <p class="social-box">
+        <a href="" class="btn btn-block btn-twitter"> <i class="fab fa-google"></i>   Login via Google</a>
+        <a href="" class="btn btn-block btn-facebook"> <i class="fab fa-facebook-f"></i>   Login via facebook</a>
+    </p>
+    <p class="divider-text">
+        <span class="bg-light">OR</span>
+    </p>
+    <form class="register">
+    <div class="form-group input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+         </div>
+        <input name="" class="form-control" placeholder="Full name" type="text">
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+         </div>
+        <input name="" class="form-control" placeholder="Email address" type="email">
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+        </div>
+        <select class="custom-select" style="max-width: 120px;">
+            <option selected="">+91</option>
+            <option value="1">+972</option>
+            <option value="2">+198</option>
+            <option value="3">+701</option>
+        </select>
+        <input name="" class="form-control" placeholder="Phone number" type="text">
+    </div> <!-- form-group// -->
+    
+    <div class="form-group input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+        </div>
+        <input class="form-control" placeholder="Create password" type="password">
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+        </div>
+        <input class="form-control" placeholder="Repeat password" type="password">
+    </div> <!-- form-group// -->                                      
+    <div class="form-group">
+        <button type="submit" class="btn btn-red"> Register </button>
+    </div> <!-- form-group// -->      
+    <p class="text-center">Have an account? <a href="login.html">Log In</a> | <a href="index.html">Home</a> </p>                                                                 
+</form>
+</article>
+</div> <!-- card.// -->
+      </div>  
+</div>
+</div>
+</div>
+    <script src="js/dklight.js"></script>
+     <script>
+         const pass_field = document.querySelector('.pass-key');
+         const showBtn = document.querySelector('.show');
+         showBtn.addEventListener('click', function(){
+          if(pass_field.type === "password"){
+            pass_field.type = "text";
+            showBtn.textContent = "HIDE";
+            showBtn.style.color = "#3498db";
+          }else{
+            pass_field.type = "password";
+            showBtn.textContent = "SHOW";
+            showBtn.style.color = "#222";
+          }
+         });
+      </script>
+    
+</body>
+</html>
